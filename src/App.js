@@ -24,8 +24,9 @@ import {
 } from "./pages";
 import "./App.css";
 
+import { useStateContext } from "./contexts/ContextProvider";
 const App = () => {
-  const activeMenu = false;
+  const { activeMenu } = useStateContext();
 
   return (
     <div>
@@ -85,7 +86,7 @@ const App = () => {
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/financial" element={<Financial />} />
                 <Route path="/color-mapping" element={<ColorMapping />} />
-                <Route path="/pyrimad" element={<Pyramid />} />
+                <Route path="/pyramid" element={<Pyramid />} />
                 <Route path="/stacked" element={<Stacked />} />
               </Routes>
             </div>
